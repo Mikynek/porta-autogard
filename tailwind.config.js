@@ -4,6 +4,10 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')({
+      fontFamily: ['HelveticaNowDisplay', 'Helvetica', 'Arial', 'sans-serif'],
+    }),
+  ],
 }
 
