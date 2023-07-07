@@ -25,15 +25,41 @@
                         <img src="../img/Logo.svg" alt="Logo">
                     </a>
                     <div class="w-px h-9 m-9 bg-white bg-opacity-20"></div>
-                    <div class="flex">
-                        <a href="" class="text-sm mr-1">CZ</a>
-                        <img src="../img/Dropdown.svg" alt="Dropdown Polygon">
+                    <div class="flex text-sm" x-data="{ open: false, cz: true, en: false }">
+                        <!--Language Select-->
+                        <button x-show="cz" @click="open = !open" class="mr-1 hover:underline">CZ</button>
+                        <button x-show="en" @click="open = !open" class="mr-1 hover:underline">EN</button>
+                        <img @click="open = !open" src="../img/Dropdown.svg" alt="Dropdown Polygon">
+
+                        <div x-show="open" x-transition class="absolute top-16 bg-white text-blue p-1">
+                            <button x-show="en" @click="en = !en; cz = !cz; open = !open"
+                                @click.outside="open = false">CZ</button>
+                            <button x-show="cz" @click="en = !en; cz = !cz; open = !open"
+                                @click.outside="open = false">EN</button>
+                        </div>
                     </div>
                 </div>
                 <div class="space-x-7 underline-offset-2 ease-in duration-300" id="home-nav">
-                    <div class="inline-flex hover:text-gray-white hover:underline">
-                        <a href="#" class="mr-1">Produkty</a>
-                        <img src="../img/Dropdown.svg" alt="Dropdown Polygon">
+                    <div class="inline-flex hover:text-gray-white hover:underline" x-data="{ open: false}">
+                        <!--Dropdown-->
+                        <a @click="open = !open" href="#" class="mr-1">Produkty</a>
+                        <img @click="open = !open" src="../img/Dropdown.svg" alt="Dropdown Polygon">
+
+                        <div x-show="open" x-transition @click.outside="open = false"
+                            class="absolute top-16 bg-white text-blue border-2 border-gray">
+                            <a href="">
+                                <div class="hover:bg-gray-white p-2 hover:underline">Závory</div>
+                            </a>
+                            <a href="">
+                                <div class="hover:bg-gray-white p-2 hover:underline">Turnikety</div>
+                            </a>
+                            <a href="">
+                                <div class="hover:bg-gray-white p-2 hover:underline">Parkovací systémy</div>
+                            </a>
+                            <a href="">
+                                <div class="hover:bg-gray-white p-2 hover:underline">Silniční bariéry</div>
+                            </a>
+                        </div>
                     </div>
                     <a class="hover:text-gray-white hover:underline" href="#">Realizace</a>
                     <a class="hover:text-gray-white hover:underline" href="#">O společnosti</a>
@@ -93,37 +119,86 @@
             </div>
         </div>
     </header>
+    <!--Product Section-->
     <div class="w-full bg-white">
         <div class="max-w-screen-lg xl:max-w-screen-xl mt-8 flex flex-wrap items-center mx-auto">
-            <div class="border-2 border-gray">
-                <img class="h-96 border-b-2 border-gray" src="../img/Zavory/Mask group@3x.jpg" alt="Zavory">
+            <a href="#" class="max-w-[19rem] border-2 border-gray border-opacity-30 hover:border-opacity-90">
+                <img class="border-b-2 border-gray" src="../img/Zavory/Mask group@3x.jpg" alt="Zavory">
                 <div class="p-6 pl-12 flex">
                     <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
                     <h3 class="text-blue text-[22px]">Závory</h3>
                 </div>
-            </div>
-            <div class="border-2 border-gray">
+            </a>
+            <a href="#" class="max-w-[19rem] border-2 border-gray border-opacity-30 hover:border-opacity-90">
                 <img class="h-96 border-b-2 border-gray" src="../img/Turnikety/Mask group@3x.jpg" alt="Turnikety">
                 <div class="p-6 pl-12 flex">
                     <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
                     <h3 class="text-blue text-[22px]">Turnikety</h3>
                 </div>
-            </div>
-            <div class="border-2 border-gray">
+            </a>
+            <a href="#" class="max-w-[19rem] border-2 border-gray border-opacity-30 hover:border-opacity-90">
                 <img class="h-96 border-b-2 border-gray" src="../img/ParkSystems/Mask group@3x.jpg"
                     alt="Parkovací systémy">
                 <div class="p-6 pl-12 flex">
                     <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
                     <h3 class="text-blue text-[22px]">Parkovací systémy</h3>
                 </div>
-            </div>
-            <div class="border-2 border-gray">
+            </a>
+            <a href="#" class="max-w-[19rem] border-2 border-gray border-opacity-30 hover:border-opacity-90">
                 <img class="h-96 border-b-2 border-gray" src="../img/SilnicniBariery/Mask group@3x.webp"
                     alt="Silniční bariéry">
                 <div class="p-6 pl-12 flex">
                     <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
                     <h3 class="text-blue text-[22px]">Silniční bariéry</h3>
                 </div>
+            </a>
+        </div>
+    </div>
+    <!--Where?-->
+    <picture class="absolute -z-10">
+        <img src="../img/City.jpeg" alt="City Image" class="w-screen max-h-[36rem]">
+    </picture>
+    <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto flex justify-between">
+        <div class="font-semibold text-white text-5xl mt-32">
+            <p>Kde všude najdete</p>
+            <p>naše produkty</p>
+        </div>
+        <div class="grid grid-cols-2 grid-flow-row gap-4 mt-32">
+            <div class="bg-white text-blue flex p-4 xl:w-[420px] hover:bg-gray-white">
+                <img class=" mr-5" src="../img/Kde/Nemocnice.png" alt="Nemocnice">
+                <div class="w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
+                <p class="text-center text-xl mt-1">Nemocnice</p>
+                <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
+            </div>
+            <div class="bg-white text-blue flex p-4 xl:w-[420px] hover:bg-gray-white">
+                <img class=" mt-1 mr-6 w-[36px] h-[28px]" src="../img/Kde/Hriste.png" alt="Sport">
+                <div class="w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
+                <p class="text-center text-xl mt-1">Sport a volný čas</p>
+                <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
+            </div>
+            <div class="bg-white text-blue flex p-4 xl:w-[420px] hover:bg-gray-white">
+                <img class=" mr-5" src="../img/Kde/Obchod.png" alt="Obchod">
+                <div class="w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
+                <p class="text-center text-xl mt-1">Obchodní centra</p>
+                <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
+            </div>
+            <div class="bg-white text-blue flex p-4 xl:w-[420px] hover:bg-gray-white">
+                <img class=" mr-5" src="../img/Kde/Kancelare.png" alt="Kanceláře">
+                <div class="w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
+                <p class="text-center text-xl mt-1">Kancelářská centra</p>
+                <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
+            </div>
+            <div class="bg-white text-blue flex p-4 xl:w-[420px] hover:bg-gray-white">
+                <img class=" mr-5" src="../img/Kde/Prumysl.png" alt="Průmysl">
+                <div class="w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
+                <p class="text-center text-xl mt-1">Průmyslové areály</p>
+                <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
+            </div>
+            <div class="bg-white text-blue flex p-4 xl:w-[420px] hover:bg-gray-white">
+                <img class=" mr-5" src="../img/Kde/Hotely.png" alt="Hotely">
+                <div class="w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
+                <p class="text-center text-xl mt-1">Hotely</p>
+                <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
             </div>
         </div>
     </div>
