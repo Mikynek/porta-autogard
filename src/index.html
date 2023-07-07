@@ -12,14 +12,14 @@
 </head>
 
 <body>
-    <header class="overflow-hidden max-h-[48rem]">
+    <header>
         <picture class="absolute -z-10">
             <video src="../img/alcom-c.mp4" autoplay muted loop>
                 <source srcset="../img/alcom-c.mp4" type="video/mp4">
             </video>
         </picture>
         <nav class="text-white text-base">
-            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+            <div class="max-w-screen-lg xl:max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
                 <div class="flex flex-wrap items-center space-x-7" id="logo&lang">
                     <a href="#" class="flex self-center">
                         <img src="../img/Logo.svg" alt="Logo">
@@ -30,28 +30,28 @@
                         <img src="../img/Dropdown.svg" alt="Dropdown Polygon">
                     </div>
                 </div>
-                <div class="space-x-7" id="home-nav">
-                    <div class="inline-flex">
+                <div class="space-x-7 underline-offset-2 ease-in duration-300" id="home-nav">
+                    <div class="inline-flex hover:text-gray-white hover:underline">
                         <a href="#" class="mr-1">Produkty</a>
                         <img src="../img/Dropdown.svg" alt="Dropdown Polygon">
                     </div>
-                    <a href="#">Realizace</a>
-                    <a href="#">O společnosti</a>
-                    <a href="#">Servis</a>
-                    <a href="#">Poradna</a>
-                    <a href="#">Kontakt</a>
+                    <a class="hover:text-gray-white hover:underline" href="#">Realizace</a>
+                    <a class="hover:text-gray-white hover:underline" href="#">O společnosti</a>
+                    <a class="hover:text-gray-white hover:underline" href="#">Servis</a>
+                    <a class="hover:text-gray-white hover:underline" href="#">Poradna</a>
+                    <a class="hover:text-gray-white hover:underline" href="#">Kontakt</a>
                 </div>
             </div>
         </nav>
         <div class="h-px bg-white bg-opacity-20"></div>
-        <div class="max-w-screen-xl mx-auto text-white">
+        <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto text-white">
             <div class="mt-36 text-6xl leading-tight">
                 <p><span class="font-bold">Závory</span> a <span class="font-bold">parkovací systémy</span> </p>
                 <p>pro řízení přístupu a zabezpečení</p>
             </div>
             <div class="mt-12" id="buttons">
                 <button
-                    class="bg-red-orange-light text-gray-white px-11 py-4 ease-linear duration-150 hover:bg-red-orange hover:text-white active:bg-red-orange-dark">
+                    class="bg-red-orange text-gray-white px-11 py-4 ease-linear duration-150 hover:bg-red-orange-dark hover:text-white">
                     <span>Poznejte nás</span>
                 </button>
                 <button class="inline-flex items-center px-11 py-4">
@@ -60,8 +60,9 @@
                 </button>
             </div>
         </div>
-        <div class="h-px bg-white bg-opacity-20 mt-40"></div>
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto mt-8 text-white">
+        <div class="h-px bg-white bg-opacity-20 mt-8 xl:mt-40"></div>
+        <div
+            class="max-w-screen-lg xl:max-w-screen-xl mx-auto text-blue mt-2 lg:mt-8 lg:text-white lg:flex flex-wrap items-center justify-between">
             <div class="flex">
                 <img class="mr-3 mb-3" src="../img/Buller-star.svg" alt="Bullet Star">
                 <div>
@@ -92,6 +93,40 @@
             </div>
         </div>
     </header>
+    <div class="w-full bg-white">
+        <div class="max-w-screen-lg xl:max-w-screen-xl mt-8 flex flex-wrap items-center mx-auto">
+            <div class="border-2 border-gray">
+                <img class="h-96 border-b-2 border-gray" src="../img/Zavory/Mask group@3x.jpg" alt="Zavory">
+                <div class="p-6 pl-12 flex">
+                    <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
+                    <h3 class="text-blue text-[22px]">Závory</h3>
+                </div>
+            </div>
+            <div class="border-2 border-gray">
+                <img class="h-96 border-b-2 border-gray" src="../img/Turnikety/Mask group@3x.jpg" alt="Turnikety">
+                <div class="p-6 pl-12 flex">
+                    <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
+                    <h3 class="text-blue text-[22px]">Turnikety</h3>
+                </div>
+            </div>
+            <div class="border-2 border-gray">
+                <img class="h-96 border-b-2 border-gray" src="../img/ParkSystems/Mask group@3x.jpg"
+                    alt="Parkovací systémy">
+                <div class="p-6 pl-12 flex">
+                    <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
+                    <h3 class="text-blue text-[22px]">Parkovací systémy</h3>
+                </div>
+            </div>
+            <div class="border-2 border-gray">
+                <img class="h-96 border-b-2 border-gray" src="../img/SilnicniBariery/Mask group@3x.webp"
+                    alt="Silniční bariéry">
+                <div class="p-6 pl-12 flex">
+                    <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
+                    <h3 class="text-blue text-[22px]">Silniční bariéry</h3>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
