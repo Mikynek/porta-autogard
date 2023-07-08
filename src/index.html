@@ -19,7 +19,8 @@
             </video>
         </picture>
         <nav class="text-white text-base">
-            <div class="max-w-screen-lg xl:max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+            <div
+                class="ml-6 lg:ml-auto max-w-screen-lg xl:max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
                 <div class="flex flex-wrap items-center space-x-7" id="logo&lang">
                     <a href="#" class="flex self-center">
                         <img src="../img/Logo.svg" alt="Logo">
@@ -39,7 +40,49 @@
                         </div>
                     </div>
                 </div>
-                <div class="space-x-7 underline-offset-2 ease-in duration-300" id="home-nav">
+                <!--Mobile Nav-Bar-->
+                <div class="lg:hidden space-x-7 underline-offset-2 ease-in duration-300 z-30" x-data="{ mobile: false}">
+                    <button data-collapse-toggle="navbar-dropdown" type="button" @click="mobile = !mobile"
+                        class="inline-flex items-center mr-6 p-2 w-10 h-10 justify-center text-sm text-gray-white rounded-lg hover:bg-gray hover:bg-opacity-25 focus:ring-2">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                    <div class="lg:hidden grid grid-cols-1 absolute bg-gray-white text-blue top-{72px} right-6 p-6"
+                        x-show="mobile" x-transition @click.outside="mobile = false" x-data="{ openMobile: false}">
+                        <!--Dropdown-->
+                        <a class="flex hover:text-blue-dark" href="#">
+                            <span @click="openMobile = !openMobile" class="mr-1">Produkty</span>
+                            <img @click="openMobile = !openMobile" src="../img/Dropdown.svg" alt="Dropdown Polygon"></a>
+
+                        <div x-show="openMobile" x-transition @click.outside="openMobile = false"
+                            class="relative bg-white text-blue border-2 border-gray">
+                            <a href="">
+                                <div class="hover:bg-gray-white p-2 underline hover:no-underline">Závory</div>
+                            </a>
+                            <a href="">
+                                <div class="hover:bg-gray-white p-2 underline hover:no-underline">Turnikety</div>
+                            </a>
+                            <a href="">
+                                <div class="hover:bg-gray-white p-2 underline hover:no-underline">Parkovací systémy
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="hover:bg-gray-white p-2 underline hover:no-underline">Silniční bariéry</div>
+                            </a>
+                        </div>
+                        <a class="hover:text-blue-dark" href="#">Realizace</a>
+                        <a class="hover:text-blue-dark" href="#">O společnosti</a>
+                        <a class="hover:text-blue-dark" href="#">Servis</a>
+                        <a class="hover:text-blue-dark" href="#">Poradna</a>
+                        <a class="hover:text-blue-dark" href="#">Kontakt</a>
+                    </div>
+                </div>
+                <!--Desktop Nav-Bar-->
+                <div class="hidden lg:block space-x-7 underline-offset-2 ease-in duration-300" id="home-nav">
                     <div class="inline-flex hover:text-gray-white hover:underline" x-data="{ open: false}">
                         <!--Dropdown-->
                         <a @click="open = !open" href="#" class="mr-1">Produkty</a>
@@ -48,16 +91,17 @@
                         <div x-show="open" x-transition @click.outside="open = false"
                             class="absolute top-16 bg-white text-blue border-2 border-gray">
                             <a href="">
-                                <div class="hover:bg-gray-white p-2 hover:underline">Závory</div>
+                                <div class="hover:bg-gray-white p-2 underline hover:no-underline">Závory</div>
                             </a>
                             <a href="">
-                                <div class="hover:bg-gray-white p-2 hover:underline">Turnikety</div>
+                                <div class="hover:bg-gray-white p-2 underline hover:no-underline">Turnikety</div>
                             </a>
                             <a href="">
-                                <div class="hover:bg-gray-white p-2 hover:underline">Parkovací systémy</div>
+                                <div class="hover:bg-gray-white p-2 underline hover:no-underline">Parkovací systémy
+                                </div>
                             </a>
                             <a href="">
-                                <div class="hover:bg-gray-white p-2 hover:underline">Silniční bariéry</div>
+                                <div class="hover:bg-gray-white p-2 underline hover:no-underline">Silniční bariéry</div>
                             </a>
                         </div>
                     </div>
@@ -207,12 +251,12 @@
             <div class="flex flex-wrap items-center justify-between mx-auto">
                 <p class="text-3xl">Probereme vaše potřeby a <span class="font-bold">najdeme nejlepší řešení.</span></p>
                 <button
-                    class="bg-red-orange text-gray-white flex items-center px-8 py-4 max-w-[300px] ease-linear duration-150 hover:bg-red-orange-dark hover:text-white">
+                    class="bg-red-orange text-gray-white flex items-center px-7 py-4 max-w-[300px] ease-linear duration-150 hover:bg-red-orange-dark hover:text-white">
                     <p>Kontaktujte nás</p>
-                    <img class="h-[7px] ml-16" src="../img/Combined-Shape@3xWhite.png" alt="Bullet Orange">
+                    <img class="h-[7px] ml-24" src="../img/Combined-Shape@3xWhite.png" alt="Bullet Orange">
                 </button>
             </div>
-            <div class="h-px bg-white bg-opacity-20 mt-8"></div>
+            <div class="h-px bg-white bg-opacity-20 mt-12"></div>
             <div class="grid grid-cols-4 mt-8">
                 <div>
                     <img src="../img/Logo.svg" alt="Logo">
@@ -266,7 +310,8 @@
             <div class="h-px bg-white bg-opacity-20 mt-8"></div>
             <div class="flex flex-wrap items-center justify-between mx-auto mt-8">
                 <p class="text-sm opacity-60">&copy; 2023 AUTOGARD | Ochrana osobních údajů</p>
-                <a href="https://www.portadesign.cz" target="_blank"><img src="../img/Porta-logo.svg" alt="PORTA logo"></a>
+                <a href="https://www.portadesign.cz" target="_blank"><img src="../img/Porta-logo.svg"
+                        alt="PORTA logo"></a>
             </div>
         </div>
     </footer>
