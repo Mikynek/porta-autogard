@@ -542,20 +542,12 @@ video {
   position: relative;
 }
 
-.right-10 {
-  right: 2.5rem;
+.right-6 {
+  right: 1.5rem;
 }
 
 .top-16 {
   top: 4rem;
-}
-
-.top-20 {
-  top: 5rem;
-}
-
-.right-6 {
-  right: 1.5rem;
 }
 
 .-z-10 {
@@ -641,10 +633,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.inline-block {
-  display: inline-block;
 }
 
 .flex {
