@@ -542,20 +542,12 @@ video {
   position: relative;
 }
 
-.right-6 {
-  right: 1.5rem;
+.right-0 {
+  right: 0px;
 }
 
 .top-16 {
   top: 4rem;
-}
-
-.left-0 {
-  left: 0px;
-}
-
-.right-0 {
-  right: 0px;
 }
 
 .-z-10 {
@@ -593,12 +585,12 @@ video {
   margin-bottom: 0.75rem;
 }
 
-.ml-4 {
-  margin-left: 1rem;
+.ml-1 {
+  margin-left: 0.25rem;
 }
 
-.ml-6 {
-  margin-left: 1.5rem;
+.ml-4 {
+  margin-left: 1rem;
 }
 
 .ml-auto {
@@ -647,10 +639,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.ml-1 {
-  margin-left: 0.25rem;
 }
 
 .flex {
@@ -705,26 +693,6 @@ video {
   min-height: 24rem;
 }
 
-.min-h-\[5000px\] {
-  min-height: 5000px;
-}
-
-.min-h-\[500px\] {
-  min-height: 500px;
-}
-
-.min-h-\[200px\] {
-  min-height: 200px;
-}
-
-.min-h-\[260px\] {
-  min-height: 260px;
-}
-
-.min-h-\[280px\] {
-  min-height: 280px;
-}
-
 .w-10 {
   width: 2.5rem;
 }
@@ -757,38 +725,6 @@ video {
   width: 100vw;
 }
 
-.min-w-\[450px\] {
-  min-width: 450px;
-}
-
-.min-w-\[5000px\] {
-  min-width: 5000px;
-}
-
-.min-w-\[280px\] {
-  min-width: 280px;
-}
-
-.min-w-\[1000px\] {
-  min-width: 1000px;
-}
-
-.min-w-\[500px\] {
-  min-width: 500px;
-}
-
-.min-w-\[800px\] {
-  min-width: 800px;
-}
-
-.min-w-\[850px\] {
-  min-width: 850px;
-}
-
-.min-w-\[840px\] {
-  min-width: 840px;
-}
-
 .min-w-\[825px\] {
   min-width: 825px;
 }
@@ -805,10 +741,6 @@ video {
   max-width: 1024px;
 }
 
-.max-w-screen-md {
-  max-width: 768px;
-}
-
 .grid-flow-row {
   grid-auto-flow: row;
 }
@@ -819,10 +751,6 @@ video {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-wrap {
@@ -1128,8 +1056,16 @@ video {
     margin-left: 6rem;
   }
 
+  .sm\:ml-6 {
+    margin-left: 1.5rem;
+  }
+
   .sm\:mr-5 {
     margin-right: 1.25rem;
+  }
+
+  .sm\:mr-6 {
+    margin-right: 1.5rem;
   }
 
   .sm\:mt-0 {
@@ -1138,14 +1074,6 @@ video {
 
   .sm\:mt-8 {
     margin-top: 2rem;
-  }
-
-  .sm\:ml-6 {
-    margin-left: 1.5rem;
-  }
-
-  .sm\:mr-6 {
-    margin-right: 1.5rem;
   }
 
   .sm\:block {
