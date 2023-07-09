@@ -15,9 +15,6 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('@tailwindcss/typography')({
-      fontFamily: ['HelveticaNowDisplay', 'Helvetica', 'Arial', 'sans-serif'],
-    }),
   ],
 }
 

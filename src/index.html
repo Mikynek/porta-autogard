@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Helvetica+Now+Display:wght@400;500;700&display=swap">
     <link href="../dist/output.css" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>AUTOGARD</title>
@@ -14,13 +12,13 @@
 <body>
     <header>
         <picture class="absolute -z-10">
-            <video src="../img/alcom-c.mp4" autoplay muted loop>
+            <video class="min-w-[825px]" src="../img/alcom-c.mp4" autoplay muted loop>
                 <source srcset="../img/alcom-c.mp4" type="video/mp4">
             </video>
         </picture>
         <nav class="text-white text-base">
             <div
-                class="ml-6 lg:ml-auto max-w-screen-lg xl:max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+                class="ml-1 sm:ml-6 lg:ml-auto max-w-screen-lg xl:max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
                 <div class="flex flex-wrap items-center space-x-7" id="logo&lang">
                     <a href="#" class="flex self-center">
                         <img src="../img/Logo.svg" alt="Logo">
@@ -43,7 +41,7 @@
                 <!--Mobile Nav-Bar-->
                 <div class="lg:hidden space-x-7 underline-offset-2 ease-in duration-300 z-30" x-data="{ mobile: false}">
                     <button data-collapse-toggle="navbar-dropdown" type="button" @click="mobile = !mobile"
-                        class="inline-flex items-center mr-6 p-2 w-10 h-10 justify-center text-sm text-gray-white rounded-lg hover:bg-gray hover:bg-opacity-25 focus:ring-2">
+                        class="inline-flex items-center mr-1 sm:mr-6 p-2 w-10 h-10 justify-center text-sm text-gray-white rounded-lg hover:bg-gray hover:bg-opacity-25 focus:ring-2">
                         <span class="sr-only">Open main menu</span>
                         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 17 14">
@@ -51,15 +49,15 @@
                                 d="M1 1h15M1 7h15M1 13h15" />
                         </svg>
                     </button>
-                    <div class="lg:hidden grid grid-cols-1 absolute bg-gray-white text-blue top-{72px} right-6 p-6"
+                    <div class="lg:hidden grid grid-cols-1 absolute w-screen bg-gray-white text-blue right-0 p-6"
                         x-show="mobile" x-transition @click.outside="mobile = false" x-data="{ openMobile: false}">
                         <!--Dropdown-->
                         <a class="flex hover:text-blue-dark" href="#">
-                            <span @click="openMobile = !openMobile" class="mr-1">Produkty</span>
+                            <span @click="openMobile = !openMobile" class="mr-1 p-2">Produkty</span>
                             <img @click="openMobile = !openMobile" src="../img/Dropdown.svg" alt="Dropdown Polygon"></a>
 
                         <div x-show="openMobile" x-transition @click.outside="openMobile = false"
-                            class="relative bg-white text-blue border-2 border-gray">
+                            class="relative z-40 bg-white text-blue border-2 border-gray">
                             <a href="">
                                 <div class="hover:bg-gray-white p-2 underline hover:no-underline">Závory</div>
                             </a>
@@ -74,11 +72,11 @@
                                 <div class="hover:bg-gray-white p-2 underline hover:no-underline">Silniční bariéry</div>
                             </a>
                         </div>
-                        <a class="hover:text-blue-dark" href="#">Realizace</a>
-                        <a class="hover:text-blue-dark" href="#">O společnosti</a>
-                        <a class="hover:text-blue-dark" href="#">Servis</a>
-                        <a class="hover:text-blue-dark" href="#">Poradna</a>
-                        <a class="hover:text-blue-dark" href="#">Kontakt</a>
+                        <a class="hover:text-blue-dark p-2" href="#">Realizace</a>
+                        <a class="hover:text-blue-dark p-2" href="#">O společnosti</a>
+                        <a class="hover:text-blue-dark p-2" href="#">Servis</a>
+                        <a class="hover:text-blue-dark p-2" href="#">Poradna</a>
+                        <a class="hover:text-blue-dark p-2" href="#">Kontakt</a>
                     </div>
                 </div>
                 <!--Desktop Nav-Bar-->
@@ -115,7 +113,8 @@
         </nav>
         <div class="h-px bg-white bg-opacity-20"></div>
         <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto text-white">
-            <div class="ml-4 mt-2 text-xl lg:ml-0 md:mt-12 md:text-3xl lg:mt-28 lg:text-5xl xl:mt-36 xl:text-6xl leading-tight">
+            <div
+                class="ml-4 mt-2 text-xl lg:ml-0 md:mt-12 md:text-3xl lg:mt-28 lg:text-5xl xl:mt-36 xl:text-6xl leading-tight">
                 <p><span class="font-bold">Závory</span> a <span class="font-bold">parkovací systémy</span> </p>
                 <p>pro řízení přístupu a zabezpečení</p>
             </div>
@@ -130,9 +129,9 @@
                 </button>
             </div>
         </div>
-        <div class="h-px bg-white bg-opacity-20 mt-8 xl:mt-40"></div>
+        <div class="h-px bg-white bg-opacity-20 mt-1 sm:mt-8 xl:mt-40"></div>
         <div
-            class="max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto text-white grid mt-2 lg:mt-8 grid-cols-4 md:grid-cols-2 lg:grid-cols-4">
+            class="mx-2 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto text-white grid mt-2 lg:mt-8 grid-cols-2 sm:grid-cols-4">
             <div class="flex">
                 <img class="mr-3 mb-3 w-[13px]" src="../img/Buller-star.svg" alt="Bullet Star">
                 <div>
@@ -165,7 +164,7 @@
     </header>
     <!--Product Section-->
     <div class="w-full bg-white">
-        <div class="max-w-screen-lg xl:max-w-screen-xl mt-8 flex flex-wrap items-center mx-auto">
+        <div class="mx-8 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto mt-8 flex flex-wrap items-center">
             <a href="#" class="max-w-[19rem] border-2 border-gray border-opacity-30 hover:border-opacity-90">
                 <img class="border-b-2 border-gray" src="../img/Zavory/Mask group@3x.jpg" alt="Zavory">
                 <div class="p-6 pl-12 flex">
@@ -200,53 +199,53 @@
     </div>
     <!--Where?-->
     <picture class="absolute -z-10">
-        <img src="../img/City.jpeg" alt="City Image" class="w-screen max-h-[36rem]">
+        <img src="../img/City.jpeg" alt="City Image" class="w-screen min-h-[24rem] max-h-[36rem]">
     </picture>
-    <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto flex justify-between">
-        <div class="font-semibold text-white text-5xl mt-32">
+    <div class="mx-2 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto lg:flex justify-between">
+        <div class="font-semibold text-white text-2xl md:text-3xl lg:text-5xl mt-4 lg:mt-32">
             <p>Kde všude najdete</p>
             <p>naše produkty</p>
         </div>
-        <div class="grid grid-cols-2 grid-flow-row gap-4 mt-32">
-            <div class="bg-white text-blue flex p-4 xl:w-[420px] hover:bg-gray-white">
-                <img class=" mr-5" src="../img/Kde/Nemocnice.png" alt="Nemocnice">
-                <div class="w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 grid-flow-row gap-4 mt-4 lg:mt-32">
+            <div class="bg-white text-blue flex p-1 md:p-4 xl:w-[420px] hover:bg-gray-white">
+                <img class="mr-1 sm:mr-5" src="../img/Kde/Nemocnice.png" alt="Nemocnice">
+                <div class="hidden sm:block w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
                 <p class="text-center text-xl mt-1">Nemocnice</p>
                 <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
             </div>
-            <div class="bg-white text-blue flex p-4 xl:w-[420px] hover:bg-gray-white">
-                <img class=" mt-1 mr-6 w-[36px] h-[28px]" src="../img/Kde/Hriste.png" alt="Sport">
-                <div class="w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
+            <div class="bg-white text-blue flex p-1 md:p-4 xl:w-[420px] hover:bg-gray-white">
+                <img class="h-8 mt-1 mr-6 w-[36px] md:h-[28px]" src="../img/Kde/Hriste.png" alt="Sport">
+                <div class="hidden sm:block w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
                 <p class="text-center text-xl mt-1">Sport a volný čas</p>
                 <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
             </div>
-            <div class="bg-white text-blue flex p-4 xl:w-[420px] hover:bg-gray-white">
-                <img class=" mr-5" src="../img/Kde/Obchod.png" alt="Obchod">
-                <div class="w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
+            <div class="bg-white text-blue flex p-1 md:p-4 xl:w-[420px] hover:bg-gray-white">
+                <img class="mr-1 md:mr-5" src="../img/Kde/Obchod.png" alt="Obchod">
+                <div class="hidden sm:block w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
                 <p class="text-center text-xl mt-1">Obchodní centra</p>
                 <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
             </div>
-            <div class="bg-white text-blue flex p-4 xl:w-[420px] hover:bg-gray-white">
-                <img class=" mr-5" src="../img/Kde/Kancelare.png" alt="Kanceláře">
-                <div class="w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
+            <div class="bg-white text-blue flex p-1 md:p-4 xl:w-[420px] hover:bg-gray-white">
+                <img class="mr-1 md:mr-5" src="../img/Kde/Kancelare.png" alt="Kanceláře">
+                <div class="hidden sm:block w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
                 <p class="text-center text-xl mt-1">Kancelářská centra</p>
                 <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
             </div>
-            <div class="bg-white text-blue flex p-4 xl:w-[420px] hover:bg-gray-white">
-                <img class=" mr-5" src="../img/Kde/Prumysl.png" alt="Průmysl">
-                <div class="w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
+            <div class="bg-white text-blue flex p-1 md:p-4 xl:w-[420px] hover:bg-gray-white">
+                <img class="mr-1 md:mr-5" src="../img/Kde/Prumysl.png" alt="Průmysl">
+                <div class="hidden sm:block w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
                 <p class="text-center text-xl mt-1">Průmyslové areály</p>
                 <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
             </div>
-            <div class="bg-white text-blue flex p-4 xl:w-[420px] hover:bg-gray-white">
-                <img class=" mr-5" src="../img/Kde/Hotely.png" alt="Hotely">
-                <div class="w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
+            <div class="bg-white text-blue flex p-1 md:p-4 xl:w-[420px] hover:bg-gray-white">
+                <img class="mr-1 md:mr-5" src="../img/Kde/Hotely.png" alt="Hotely">
+                <div class="hidden sm:block w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
                 <p class="text-center text-xl mt-1">Hotely</p>
                 <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
             </div>
         </div>
     </div>
-    <footer class="text-white bg-blue mt-36 text-lg leading-loose">
+    <footer class="text-white bg-blue mt-6 md:mt-8 xl:mt-32 text-lg leading-loose">
         <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto p-16">
             <div class="flex flex-wrap items-center justify-between mx-auto">
                 <p class="text-3xl">Probereme vaše potřeby a <span class="font-bold">najdeme nejlepší řešení.</span></p>
@@ -310,8 +309,8 @@
             <div class="h-px bg-white bg-opacity-20 mt-8"></div>
             <div class="flex flex-wrap items-center justify-between mx-auto mt-8">
                 <p class="text-sm opacity-60">&copy; 2023 AUTOGARD | Ochrana osobních údajů</p>
-                <a class="mt-2 sm:mt-0" href="https://www.portadesign.cz" target="_blank"><img src="../img/Porta-logo.svg"
-                        alt="PORTA logo"></a>
+                <a class="mt-2 sm:mt-0" href="https://www.portadesign.cz" target="_blank">
+                    <img src="../img/Porta-logo.svg" alt="PORTA logo"></a>
             </div>
         </div>
     </footer>
