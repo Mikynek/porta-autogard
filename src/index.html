@@ -12,7 +12,7 @@
 <body>
     <header>
         <picture class="absolute -z-10">
-            <video class="min-w-max" src="../img/alcom-c.mp4" autoplay muted loop>
+            <video class="min-h-[480px] object-cover" src="../img/alcom-c.mp4" autoplay muted loop>
                 <source srcset="../img/alcom-c.mp4" type="video/mp4">
             </video>
         </picture>
@@ -53,7 +53,7 @@
                         x-show="mobile" x-transition @click.outside="mobile = false" x-data="{ openMobile: false}">
                         <!--Dropdown-->
                         <a class="flex hover:text-blue-dark" href="#">
-                            <span @click="openMobile = !openMobile" class="mr-1 p-2">Produkty</span>
+                            <span @click="openMobile = !openMobile" class="mr-1 underline hover:text-blue-dark hover:no-underline p-2">Produkty</span>
                             <img @click="openMobile = !openMobile" src="../img/Dropdown.svg" alt="Dropdown Polygon"></a>
 
                         <div x-show="openMobile" x-transition @click.outside="openMobile = false"
@@ -72,11 +72,11 @@
                                 <div class="hover:bg-gray-white p-2 underline hover:no-underline">Silniční bariéry</div>
                             </a>
                         </div>
-                        <a class="hover:text-blue-dark p-2" href="#">Realizace</a>
-                        <a class="hover:text-blue-dark p-2" href="#">O společnosti</a>
-                        <a class="hover:text-blue-dark p-2" href="#">Servis</a>
-                        <a class="hover:text-blue-dark p-2" href="#">Poradna</a>
-                        <a class="hover:text-blue-dark p-2" href="#">Kontakt</a>
+                        <a href="#"><div class="underline hover:text-blue-dark hover:no-underline p-2">Realizace</div></a>
+                        <a href="#"><div class="underline hover:text-blue-dark hover:no-underline p-2">O společnosti</div></a>
+                        <a href="#"><div class="underline hover:text-blue-dark hover:no-underline p-2">Servis</div></a>
+                        <a href="#"><div class="underline hover:text-blue-dark hover:no-underline p-2">Poradna</div></a>
+                        <a href="#"><div class="underline hover:text-blue-dark hover:no-underline p-2">Kontakt</div></a>
                     </div>
                 </div>
                 <!--Desktop Nav-Bar-->
@@ -165,21 +165,21 @@
     <!--Product Section-->
     <div class="w-full bg-white">
         <div class="mx-8 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto mt-8 flex flex-wrap items-center">
-            <a href="#" class="max-w-[19rem] border-2 border-gray border-opacity-30 hover:border-opacity-90">
+            <a href="#" class="max-w-[19rem] border-2 border-gray border-opacity-30 hover:border-red-orange hover:border-opacity-75">
                 <img class="border-b-2 border-gray" src="../img/Zavory/Mask group@3x.jpg" alt="Zavory">
                 <div class="p-6 pl-12 flex">
                     <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
                     <h3 class="text-blue text-[22px]">Závory</h3>
                 </div>
             </a>
-            <a href="#" class="max-w-[19rem] border-2 border-gray border-opacity-30 hover:border-opacity-90">
+            <a href="#" class="max-w-[19rem] border-2 border-gray border-opacity-30 hover:border-red-orange hover:border-opacity-75">
                 <img class="h-96 border-b-2 border-gray" src="../img/Turnikety/Mask group@3x.jpg" alt="Turnikety">
                 <div class="p-6 pl-12 flex">
                     <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
                     <h3 class="text-blue text-[22px]">Turnikety</h3>
                 </div>
             </a>
-            <a href="#" class="max-w-[19rem] border-2 border-gray border-opacity-30 hover:border-opacity-90">
+            <a href="#" class="max-w-[19rem] border-2 border-gray border-opacity-30 hover:border-red-orange hover:border-opacity-75">
                 <img class="h-96 border-b-2 border-gray" src="../img/ParkSystems/Mask group@3x.jpg"
                     alt="Parkovací systémy">
                 <div class="p-6 pl-12 flex">
@@ -187,7 +187,7 @@
                     <h3 class="text-blue text-[22px]">Parkovací systémy</h3>
                 </div>
             </a>
-            <a href="#" class="max-w-[19rem] border-2 border-gray border-opacity-30 hover:border-opacity-90">
+            <a href="#" class="max-w-[19rem] border-2 border-gray border-opacity-30 hover:border-red-orange hover:border-opacity-75">
                 <img class="h-96 border-b-2 border-gray" src="../img/SilnicniBariery/Mask group@3x.webp"
                     alt="Silniční bariéry">
                 <div class="p-6 pl-12 flex">
@@ -208,39 +208,39 @@
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 grid-flow-row gap-4 mt-4 lg:mt-32">
             <div class="bg-white text-blue flex p-1 md:p-4 xl:w-[420px] hover:bg-gray-white">
-                <img class="mr-1 sm:mr-5" src="../img/Kde/Nemocnice.png" alt="Nemocnice">
+                <img class="mr-1 md:mr-5" src="../img/Kde/Nemocnice.png" alt="Nemocnice">
                 <div class="hidden sm:block w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
-                <p class="text-center text-xl mt-1">Nemocnice</p>
+                <p class="text-center text-base md:text-xl mt-1">Nemocnice</p>
                 <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
             </div>
             <div class="bg-white text-blue flex p-1 md:p-4 xl:w-[420px] hover:bg-gray-white">
-                <img class="h-8 mt-1 mr-6 w-[36px] md:h-[28px]" src="../img/Kde/Hriste.png" alt="Sport">
+                <img class="mr-1 h-8 mt-1 md:mr-6 w-[36px] md:h-[28px]" src="../img/Kde/Hriste.png" alt="Sport">
                 <div class="hidden sm:block w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
-                <p class="text-center text-xl mt-1">Sport a volný čas</p>
+                <p class="text-center text-base md:text-xl mt-1">Sport a volný čas</p>
                 <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
             </div>
             <div class="bg-white text-blue flex p-1 md:p-4 xl:w-[420px] hover:bg-gray-white">
                 <img class="mr-1 md:mr-5" src="../img/Kde/Obchod.png" alt="Obchod">
                 <div class="hidden sm:block w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
-                <p class="text-center text-xl mt-1">Obchodní centra</p>
+                <p class="text-center text-base md:text-xl mt-1">Obchodní centra</p>
                 <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
             </div>
             <div class="bg-white text-blue flex p-1 md:p-4 xl:w-[420px] hover:bg-gray-white">
                 <img class="mr-1 md:mr-5" src="../img/Kde/Kancelare.png" alt="Kanceláře">
                 <div class="hidden sm:block w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
-                <p class="text-center text-xl mt-1">Kancelářská centra</p>
+                <p class="text-center text-base md:text-xl mt-1">Kancelářská centra</p>
                 <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
             </div>
             <div class="bg-white text-blue flex p-1 md:p-4 xl:w-[420px] hover:bg-gray-white">
                 <img class="mr-1 md:mr-5" src="../img/Kde/Prumysl.png" alt="Průmysl">
                 <div class="hidden sm:block w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
-                <p class="text-center text-xl mt-1">Průmyslové areály</p>
+                <p class="text-center text-base md:text-xl mt-1">Průmyslové areály</p>
                 <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
             </div>
             <div class="bg-white text-blue flex p-1 md:p-4 xl:w-[420px] hover:bg-gray-white">
                 <img class="mr-1 md:mr-5" src="../img/Kde/Hotely.png" alt="Hotely">
                 <div class="hidden sm:block w-px h-9 bg-gray bg-opacity-100 mr-5"></div>
-                <p class="text-center text-xl mt-1">Hotely</p>
+                <p class="text-center text-base md:text-xl mt-1">Hotely</p>
                 <img class="ml-auto h-[7px] mt-4" src="../img/Combined-Shape@3x.png" alt="Bullet Orange">
             </div>
         </div>
