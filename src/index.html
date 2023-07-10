@@ -31,7 +31,7 @@
                         <button x-show="en" @click="open = !open" class="mr-1 hover:underline">EN</button>
                         <img @click="open = !open" src="../img/Dropdown.svg" alt="Dropdown Polygon">
 
-                        <div x-show="open" x-transition class="absolute top-16 bg-white text-blue p-1">
+                        <div x-show="open" x-transition class="absolute top-16 bg-white text-blue p-1 border-2 border-blue border-opacity-50 hover:text-white hover:bg-blue hover:border-white">
                             <button x-show="en" @click="en = !en; cz = !cz; open = !open"
                                 @click.outside="open = false">CZ</button>
                             <button x-show="cz" @click="en = !en; cz = !cz; open = !open"
@@ -50,7 +50,7 @@
                                 d="M1 1h15M1 7h15M1 13h15" />
                         </svg>
                     </button>
-                    <div class="lg:hidden grid grid-cols-1 absolute w-screen top-20 pb-60 bg-gray-white text-blue right-0 p-6"
+                    <div class="lg:hidden grid grid-cols-1 absolute w-screen top-20 pb-60 bg-white text-blue right-0 p-6 border-2 border-blue border-opacity-50"
                         x-show="mobile" x-transition @click.outside="mobile = false" x-data="{ openMobile: false}">
                         <a class="flex hover:text-blue-dark" href="#">
                             <!--Dropdown Produkty-->
@@ -60,7 +60,7 @@
                                 alt="Dropdown Polygon"></a>
 
                         <div x-show="openMobile" x-transition @click.outside="openMobile = false"
-                            class="relative z-40 bg-white text-blue border-2 border-gray">
+                            class="relative z-40 bg-white text-blue border-2 border-blue border-opacity-50">
                             <a href="">
                                 <div class="hover:bg-gray-white p-2 underline hover:no-underline">Závory</div>
                             </a>
@@ -101,19 +101,19 @@
                         <img @click="open = !open" src="../img/Dropdown.svg" alt="Dropdown Polygon">
 
                         <div x-show="open" x-transition @click.outside="open = false"
-                            class="absolute top-16 bg-white text-blue border-2 border-gray">
+                            class="absolute top-16 bg-white text-blue border-2 border-blue border-opacity-50">
                             <a href="">
-                                <div class="hover:bg-gray-white p-2 underline hover:no-underline">Závory</div>
+                                <div class="hover:bg-gray-white p-3 underline hover:no-underline">Závory</div>
                             </a>
                             <a href="">
-                                <div class="hover:bg-gray-white p-2 underline hover:no-underline">Turnikety</div>
+                                <div class="hover:bg-gray-white p-3 underline hover:no-underline">Turnikety</div>
                             </a>
                             <a href="">
-                                <div class="hover:bg-gray-white p-2 underline hover:no-underline">Parkovací systémy
+                                <div class="hover:bg-gray-white p-3 underline hover:no-underline">Parkovací systémy
                                 </div>
                             </a>
                             <a href="">
-                                <div class="hover:bg-gray-white p-2 underline hover:no-underline">Silniční bariéry</div>
+                                <div class="hover:bg-gray-white p-3 underline hover:no-underline">Silniční bariéry</div>
                             </a>
                         </div>
                     </div>
