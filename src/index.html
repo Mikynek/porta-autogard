@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../dist/output.css" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <title>AUTOGARD</title>
 </head>
 
@@ -38,7 +39,7 @@
                         </div>
                     </div>
                 </div>
-                <!--Mobile Nav-Bar-->
+                <!--Mobile Navbar-->
                 <div class="lg:hidden space-x-7 underline-offset-2 ease-in duration-300 z-30" x-data="{ mobile: false}">
                     <button data-collapse-toggle="navbar-dropdown" type="button" @click="mobile = !mobile"
                         class="inline-flex items-center mr-1 sm:mr-6 p-2 w-10 h-10 justify-center text-sm text-gray-white rounded-lg hover:bg-gray hover:bg-opacity-25 focus:ring-2">
@@ -49,12 +50,14 @@
                                 d="M1 1h15M1 7h15M1 13h15" />
                         </svg>
                     </button>
-                    <div class="lg:hidden grid grid-cols-1 absolute w-screen bg-gray-white text-blue right-0 p-6"
+                    <div class="lg:hidden grid grid-cols-1 absolute w-screen top-20 pb-60 bg-gray-white text-blue right-0 p-6"
                         x-show="mobile" x-transition @click.outside="mobile = false" x-data="{ openMobile: false}">
-                        <!--Dropdown-->
                         <a class="flex hover:text-blue-dark" href="#">
-                            <span @click="openMobile = !openMobile" class="mr-1 underline hover:text-blue-dark hover:no-underline p-2">Produkty</span>
-                            <img @click="openMobile = !openMobile" src="../img/Dropdown.svg" alt="Dropdown Polygon"></a>
+                            <!--Dropdown Produkty-->
+                            <span @click="openMobile = !openMobile"
+                                class="mr-1 underline hover:text-blue-dark hover:no-underline p-2">Produkty</span>
+                            <img class="w-[7px]" @click="openMobile = !openMobile" src="../img/Dropdown.svg"
+                                alt="Dropdown Polygon"></a>
 
                         <div x-show="openMobile" x-transition @click.outside="openMobile = false"
                             class="relative z-40 bg-white text-blue border-2 border-gray">
@@ -72,18 +75,29 @@
                                 <div class="hover:bg-gray-white p-2 underline hover:no-underline">Silniční bariéry</div>
                             </a>
                         </div>
-                        <a href="#"><div class="underline hover:text-blue-dark hover:no-underline p-2">Realizace</div></a>
-                        <a href="#"><div class="underline hover:text-blue-dark hover:no-underline p-2">O společnosti</div></a>
-                        <a href="#"><div class="underline hover:text-blue-dark hover:no-underline p-2">Servis</div></a>
-                        <a href="#"><div class="underline hover:text-blue-dark hover:no-underline p-2">Poradna</div></a>
-                        <a href="#"><div class="underline hover:text-blue-dark hover:no-underline p-2">Kontakt</div></a>
+                        <a href="#">
+                            <div class="underline hover:text-blue-dark hover:no-underline p-2">Realizace</div>
+                        </a>
+                        <a href="#">
+                            <div class="underline hover:text-blue-dark hover:no-underline p-2">O společnosti</div>
+                        </a>
+                        <a href="#">
+                            <div class="underline hover:text-blue-dark hover:no-underline p-2">Servis</div>
+                        </a>
+                        <a href="#">
+                            <div class="underline hover:text-blue-dark hover:no-underline p-2">Poradna</div>
+                        </a>
+                        <a href="#">
+                            <div class="underline hover:text-blue-dark hover:no-underline p-2">Kontakt</div>
+                        </a>
                     </div>
                 </div>
-                <!--Desktop Nav-Bar-->
+                <!--Desktop Navbar-->
                 <div class="hidden lg:block space-x-7 underline-offset-2 ease-in duration-300" id="home-nav">
                     <div class="inline-flex hover:text-gray-white hover:underline" x-data="{ open: false}">
-                        <!--Dropdown-->
-                        <a @click="open = !open" href="#" class="mr-1">Produkty</a>
+                        <a @click="open = !open" href="#" class="mr-1">
+                            <!--Dropdown-->
+                            Produkty</a>
                         <img @click="open = !open" src="../img/Dropdown.svg" alt="Dropdown Polygon">
 
                         <div x-show="open" x-transition @click.outside="open = false"
@@ -112,6 +126,7 @@
             </div>
         </nav>
         <div class="h-px bg-white bg-opacity-20"></div>
+        <!--Achievements-->
         <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto text-white">
             <div
                 class="ml-4 mt-2 text-xl lg:ml-0 md:mt-12 md:text-3xl lg:mt-28 lg:text-5xl xl:mt-36 xl:text-6xl leading-tight">
@@ -123,9 +138,10 @@
                     class="bg-red-orange text-gray-white px-11 py-4 ease-linear duration-150 hover:bg-red-orange-dark hover:text-white">
                     <span>Poznejte nás</span>
                 </button>
-                <button class="inline-flex items-center px-11 py-4">
+                <button class="inline-flex items-center px-11 py-4 hover:underline duration-300 hover:scale-105">
                     <span class="mr-2">Přehrát video</span>
-                    <img class="bg-white bg-opacity-25 p-2" src="../img/Play.svg" alt="Play Button">
+                    <img class="bg-white bg-opacity-25 p-2 hover:bg-red-orange duration-200" src="../img/Play.svg"
+                        alt="Play Button">
                 </button>
             </div>
         </div>
@@ -164,22 +180,26 @@
     </header>
     <!--Product Section-->
     <div class="w-full bg-white">
-        <div class="mx-8 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto mt-8 flex flex-wrap items-center">
-            <a href="#" class="max-w-[19rem] border-2 border-gray border-opacity-30 hover:border-red-orange hover:border-opacity-75">
+        <div
+            class="mx-8 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto mt-8 flex flex-wrap items-center">
+            <a href="#"
+                class="max-w-[19rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
                 <img class="border-b-2 border-gray" src="../img/Zavory/Mask group@3x.jpg" alt="Zavory">
                 <div class="p-6 pl-12 flex">
                     <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
                     <h3 class="text-blue text-[22px]">Závory</h3>
                 </div>
             </a>
-            <a href="#" class="max-w-[19rem] border-2 border-gray border-opacity-30 hover:border-red-orange hover:border-opacity-75">
+            <a href="#"
+                class="max-w-[19rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
                 <img class="h-96 border-b-2 border-gray" src="../img/Turnikety/Mask group@3x.jpg" alt="Turnikety">
                 <div class="p-6 pl-12 flex">
                     <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
                     <h3 class="text-blue text-[22px]">Turnikety</h3>
                 </div>
             </a>
-            <a href="#" class="max-w-[19rem] border-2 border-gray border-opacity-30 hover:border-red-orange hover:border-opacity-75">
+            <a href="#"
+                class="max-w-[19rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
                 <img class="h-96 border-b-2 border-gray" src="../img/ParkSystems/Mask group@3x.jpg"
                     alt="Parkovací systémy">
                 <div class="p-6 pl-12 flex">
@@ -187,7 +207,8 @@
                     <h3 class="text-blue text-[22px]">Parkovací systémy</h3>
                 </div>
             </a>
-            <a href="#" class="max-w-[19rem] border-2 border-gray border-opacity-30 hover:border-red-orange hover:border-opacity-75">
+            <a href="#"
+                class="max-w-[19rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
                 <img class="h-96 border-b-2 border-gray" src="../img/SilnicniBariery/Mask group@3x.webp"
                     alt="Silniční bariéry">
                 <div class="p-6 pl-12 flex">
@@ -197,11 +218,12 @@
             </a>
         </div>
     </div>
-    <!--Where?-->
+    <!--Solution Areas-->
     <picture class="absolute -z-10">
         <img src="../img/City.jpeg" alt="City Image" class="w-screen min-h-[24rem] max-h-[36rem]">
     </picture>
-    <div class="mx-2 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto lg:flex justify-between">
+    <div
+        class="mx-2 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto lg:flex justify-between">
         <div class="font-semibold text-white text-2xl md:text-3xl lg:text-5xl mt-4 lg:mt-32">
             <p>Kde všude najdete</p>
             <p>naše produkty</p>
@@ -245,6 +267,7 @@
             </div>
         </div>
     </div>
+    <!--Footer-->
     <footer class="text-white bg-blue mt-6 md:mt-8 xl:mt-32 text-lg leading-loose">
         <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto p-16">
             <div class="flex flex-wrap items-center justify-between mx-auto">
