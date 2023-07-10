@@ -267,11 +267,73 @@
             </div>
         </div>
     </div>
+    <!-- Slideshow -->
+    <div x-data="{ slideIndex: 0 }" class="ml-2 md:ml-24 xl:ml-38 mt-28 md:mt-20 lg:mt-24 xl:mt-[12.5rem]">
+        <div class="mx-8 mt-8 flex flex-wrap items-center">
+            <div class="max-w-[28rem] pl-12 pr-20 py-24 border-2 border-gray border-opacity-30">
+                <div class="mb-12 font-semibold text-blue text-4xl lg:text-5xl">
+                    <p>Ukázky</p>
+                    <p>vybraných</p>
+                    <p>realizací</p>
+                </div>
+                <div>
+                    <button @click="if (slideIndex > 0) slideIndex--"
+                        class="p-4 border-2 border-gray border-opacity-50 hover:border-red-orange">
+                        <img class="rotate-180 w-4" src="../img/Bullet-orange.svg" alt="Arrow Left">
+                    </button>
+                    <button @click="slideIndex = slideIndex > 2 ? 0 : slideIndex + 1"
+                        class="p-4 border-2 border-gray border-opacity-50 hover:border-red-orange">
+                        <img class="w-4" src="../img/Bullet-orange.svg" alt="Arrow Right">
+                    </button>
+                </div>
+                <a href="https://www.autogard.cz/reference/"
+                    class="mt-16 flex flex-wrap items-center underline-offset-2 decoration-red-orange hover:underline focus:decoration-blue">
+                    <p class="text-red-orange text-lg">Ukázat vše</p>
+                    <img class="w-4" src="../img/Bullet-orange.svg" alt="Arrow Right">
+                </a>
+            </div>
+            <a x-show="slideIndex === 0" href="#"
+                class="max-w-[28rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
+                <img class="mt-8 lg:mt-16" src="../img/slideshow/Rectangle 115_2023-07-10/Rectangle 115@3x.jpg"
+                    alt="Zavory HARTMANN">
+                <div class="p-6 pl-12 flex my-8">
+                    <h3 class="text-blue text-[22px]">Instalace závor a turniketů ve výrobním závodě HARTMANN</h3>
+                    <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
+                </div>
+            </a>
+            <a x-show="slideIndex === 0 || slideIndex === 1" href="#"
+                class="max-w-[28rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
+                <img class="mt-8 lg:mt-16" src="../img/slideshow/Rectangle 117_2023-07-10/Rectangle 117@3x.jpg"
+                    alt="Parking Avanti">
+                <div class="p-6 pl-12 flex my-8">
+                    <h3 class="text-blue text-[22px]">Kompletní parkovací systém hotelu AVANTI</h3>
+                    <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
+                </div>
+            </a>
+            <a x-show="slideIndex === 1 || slideIndex === 2" href="#"
+                class="max-w-[28rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
+                <img class="mt-8 lg:mt-16" src="../img/slideshow/Rectangle 118.jpg" alt="DHL">
+                <div class="p-6 pl-12 flex my-8">
+                    <h3 class="text-blue text-[22px]">Montáž vjezdového systému do logistického centra DHL</h3>
+                    <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
+                </div>
+            </a>
+            <a x-show="slideIndex === 2 || slideIndex === 3" href="#"
+                class="max-w-[28rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
+                <img class="mt-8 lg:mt-16" src="../img/slideshow/Rectangle 119.jpg" alt="Parking Avanti">
+                <div class="p-6 pl-12 flex my-8">
+                    <h3 class="text-blue text-[22px]">Kompletní parkovací systém hotelu AVANTI</h3>
+                    <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
+                </div>
+            </a>
+        </div>
+    </div>
     <!--Footer-->
-    <footer class="text-white bg-blue mt-6 md:mt-8 xl:mt-32 text-lg leading-loose">
+    <footer class="text-white bg-blue  text-lg leading-loose">
         <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto p-16">
             <div class="flex flex-wrap items-center justify-between mx-auto">
-                <p class="text-3xl">Probereme vaše potřeby a <span class="font-bold">najdeme nejlepší řešení.</span></p>
+                <p class="text-3xl">Probereme vaše potřeby a <span class="font-bold">najdeme nejlepší řešení.</span>
+                </p>
                 <button
                     class="bg-red-orange text-gray-white flex items-center mt-4 px-5 sm:px-7 py-4 max-w-[300px] ease-linear duration-150 hover:bg-red-orange-dark hover:text-white">
                     <p>Kontaktujte nás</p>
