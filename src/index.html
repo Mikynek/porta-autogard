@@ -12,12 +12,11 @@
 
 <body>
     <header>
-        <video class="absolute -z-10 min-h-[480px] object-cover" autoplay muted loop>
+        <video class="absolute -z-10 min-h-[480px] object-cover w-screen" autoplay muted loop>
             <source src="../img/alcom-c.mp4" type="video/mp4">
         </video>
         <nav class="text-white text-base">
-            <div
-                class="ml-1 sm:ml-6 lg:ml-auto max-w-screen-lg xl:max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+            <div class="mx-2 sm:ml-6 lg:ml-auto container flex flex-wrap items-center justify-between sm:mx-auto">
                 <div class="flex flex-wrap items-center space-x-7" id="logo&lang">
                     <a href="#" class="flex self-center">
                         <svg width="161" height="37" viewBox="0 0 161 37" fill="none"
@@ -116,7 +115,7 @@
                     </div>
                 </div>
                 <!--Desktop Navbar-->
-                <div class="hidden lg:block space-x-7 underline-offset-2 ease-in duration-300" id="home-nav">
+                <div class="hidden lg:block space-x-8 underline-offset-2 ease-in duration-300" id="home-nav">
                     <div class="inline-flex hover:text-gray-white hover:underline" x-data="{ open: false}">
                         <a @click="open = !open" href="#" class="mr-1">
                             <!--Dropdown-->
@@ -152,15 +151,15 @@
             </div>
         </nav>
         <div class="h-px bg-white bg-opacity-20"></div>
-        <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto text-white">
+        <div class="container mx-auto text-white">
             <div
                 class="ml-4 mt-2 text-xl lg:ml-0 md:mt-12 md:text-3xl lg:mt-28 lg:text-5xl xl:mt-36 xl:text-6xl leading-tight">
                 <h1><span class="font-bold">Závory</span> a <span class="font-bold">parkovací systémy</span></h1>
                 <h1>pro řízení přístupu a zabezpečení</h1>
             </div>
-            <div class="ml-4 mt-4 lg:ml-0 lg:mt-12" id="buttons">
+            <div class="ml-4 mt-4 lg:ml-0 lg:mt-20" id="buttons">
                 <button
-                    class="bg-red-orange text-gray-white px-11 py-4 ease-linear duration-150 hover:bg-red-orange-dark hover:text-white">
+                    class="bg-red-orange text-gray-white px-10 py-4 ease-linear duration-150 hover:bg-red-orange-dark hover:text-white">
                     <span>Poznejte nás</span>
                 </button>
                 <button class="group inline-flex items-center px-11 py-4 hover:underline duration-300 hover:scale-105">
@@ -172,8 +171,7 @@
         </div>
         <div class="h-px bg-white bg-opacity-20 mt-1 sm:mt-8 xl:mt-40"></div>
         <!--Achievements-->
-        <div
-            class="mx-2 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto text-white grid mt-2 lg:mt-8 grid-cols-2 sm:grid-cols-4">
+        <div class="mx-2 container sm:mx-auto text-white grid mt-2 lg:mt-8 grid-cols-2 sm:grid-cols-4">
             <div class="flex">
                 <svg class="mr-3 mt-3 w-[13px]" width="13" height="13" viewBox="0 0 13 13" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -254,48 +252,47 @@
     </header>
     <!--Product Section-->
     <div class="w-full bg-white">
-        <div
-            class="mx-8 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto mt-8 flex flex-wrap items-center">
+        <div class="mx-4 container sm:mx-auto mt-10 flex flex-wrap items-center">
             <a href="#"
-                class="max-w-[19rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
+                class="max-w-[20rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
                 <picture>
                     <source srcset="../img/Zavory/Zavory3x.jpg" type="image/jpg" loading="lazy">
                     <img class="h-96 border-b-2 border-gray" src="../img/Zavory/Zavory.jpg" alt="Zavory">
                 </picture>
-                <div class="p-6 pl-12 flex">
+                <div class="p-8 pl-8 flex">
                     <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
                     <h3 class="text-blue text-[22px]">Závory</h3>
                 </div>
             </a>
             <a href="#"
-                class="max-w-[19rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
+                class="max-w-[20rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
                 <picture>
                     <source srcset="../img/Turnikety/Turnikety3x.jpg" type="image/jpg" loading="lazy">
                     <img class="h-96 border-b-2 border-gray" src="../img/Turnikety/Turnikety.jpg" alt="Turnikety">
                 </picture>
-                <div class="p-6 pl-12 flex">
+                <div class="p-8 pl-8 flex">
                     <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
                     <h3 class="text-blue text-[22px]">Turnikety</h3>
                 </div>
             </a>
             <a href="#"
-                class="max-w-[19rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
+                class="max-w-[20rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
                 <picture>
                     <source srcset="../img/ParkSystems/Park3x.jpg" type="image/jpg" loading="lazy">
                     <img class="h-96 border-b-2 border-gray" src="../img/ParkSystems/Park.jpg" alt="Parkovací systémy">
                 </picture>
-                <div class="p-6 pl-12 flex">
+                <div class="p-8 pl-8 flex">
                     <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
                     <h3 class="text-blue text-[22px]">Parkovací systémy</h3>
                 </div>
             </a>
             <a href="#"
-                class="max-w-[19rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
+                class="max-w-[20rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
                 <picture>
                     <img class="h-96 border-b-2 border-gray" src="../img/SilnicniBariery/Barrier.webp"
                         alt="Silniční bariéry">
                 </picture>
-                <div class="p-6 pl-12 flex">
+                <div class="p-8 pl-8 flex">
                     <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
                     <h3 class="text-blue text-[22px]">Silniční bariéry</h3>
                 </div>
@@ -307,13 +304,12 @@
         <source srcset="../img/City.jpeg">
         <img src="../img/City.jpeg" alt="City Image" class="w-screen min-h-[24rem] max-h-[36rem]">
     </picture>
-    <div
-        class="mx-2 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl sm:mx-auto lg:flex justify-between">
+    <div class="mx-4 container sm:mx-auto lg:flex justify-between">
         <div class="font-semibold text-white text-2xl md:text-3xl lg:text-5xl mt-4 lg:mt-32">
             <h2>Kde všude najdete</h2>
             <h2>naše produkty</h2>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 grid-flow-row gap-4 mt-4 lg:mt-32">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 grid-flow-row gap-4 lg:gap-8 mt-4 lg:mt-32">
             <div class="bg-white text-blue flex p-1 md:p-4 xl:w-[420px] hover:bg-gray-white">
                 <svg class="mr-1 md:mr-5" width="40" height="40" viewBox="0 0 40 40" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -410,9 +406,9 @@
         </div>
     </div>
     <!-- Slideshow -->
-    <div x-data="{ slideIndex: 0 }" class="ml-2 md:ml-24 xl:ml-38 mt-28 md:mt-20 lg:mt-24 xl:mt-[12.5rem]">
-        <div class="mx-8 mt-8 flex flex-wrap items-center">
-            <div class="max-w-[28rem] pl-12 pr-20 py-24 border-2 border-gray border-opacity-30">
+    <div x-data="{ slideIndex: 0 }" class="mx-4 container mt-28 md:mt-16 lg:mt-24 xl:mt-44 sm:mx-auto">
+        <div class="mt-8 flex flex-wrap items-center">
+            <div class="pl-12 pr-20 py-24 border-2 border-gray border-opacity-30">
                 <div class="mb-12 font-semibold text-blue text-4xl lg:text-5xl">
                     <p>Ukázky</p>
                     <p>vybraných</p>
@@ -429,14 +425,14 @@
                     </button>
                 </div>
                 <a href="https://www.autogard.cz/reference/"
-                    class="mt-16 flex flex-wrap items-center underline-offset-2 decoration-red-orange hover:underline focus:decoration-blue">
+                    class="mt-24 flex flex-wrap items-center underline-offset-2 decoration-red-orange hover:underline focus:decoration-blue">
                     <p class="text-red-orange text-lg">Ukázat vše</p>
                     <img class="w-4" src="../img/Bullet-orange.svg" alt="Arrow Right">
                 </a>
             </div>
             <a x-show="slideIndex === 0" href="#"
                 class="max-w-[28rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
-                <img class="mt-8 lg:mt-16" src="../img/slideshow/Rectangle115.jpg" alt="Zavory HARTMANN">
+                <img class="mt-8 lg:mt-24" src="../img/slideshow/Rectangle115.jpg" alt="Zavory HARTMANN">
                 <div class="p-6 pl-12 flex my-8">
                     <h3 class="text-blue text-[22px]">Instalace závor a turniketů ve výrobním závodě HARTMANN</h3>
                     <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
@@ -444,7 +440,7 @@
             </a>
             <a x-show="slideIndex === 0 || slideIndex === 1" href="#"
                 class="max-w-[28rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
-                <img class="mt-8 lg:mt-16" src="../img/slideshow/Rectangle117.jpg" alt="Parking Avanti">
+                <img class="mt-8 lg:mt-24" src="../img/slideshow/Rectangle117.jpg" alt="Parking Avanti">
                 <div class="p-6 pl-12 flex my-8">
                     <h3 class="text-blue text-[22px]">Kompletní parkovací systém hotelu AVANTI</h3>
                     <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
@@ -452,7 +448,7 @@
             </a>
             <a x-show="slideIndex === 1 || slideIndex === 2" href="#"
                 class="max-w-[28rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
-                <img class="mt-8 lg:mt-16" src="../img/slideshow/Rectangle118.jpg" alt="DHL">
+                <img class="mt-8 lg:mt-24" src="../img/slideshow/Rectangle118.jpg" alt="DHL">
                 <div class="p-6 pl-12 flex my-8">
                     <h3 class="text-blue text-[22px]">Montáž vjezdového systému do logistického centra DHL</h3>
                     <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
@@ -460,7 +456,7 @@
             </a>
             <a x-show="slideIndex === 2 || slideIndex === 3" href="#"
                 class="max-w-[28rem] border-2 border-gray border-opacity-30 duration-500 hover:border-red-orange hover:border-opacity-75">
-                <img class="mt-8 lg:mt-16" src="../img/slideshow/Rectangle119.jpg" alt="Parking Avanti">
+                <img class="mt-8 lg:mt-24" src="../img/slideshow/Rectangle119.jpg" alt="Parking Avanti">
                 <div class="p-6 pl-12 flex my-8">
                     <h3 class="text-blue text-[22px]">Kompletní parkovací systém hotelu AVANTI</h3>
                     <img src="../img/Bullet-orange.svg" alt="Bullet Orange">
@@ -469,8 +465,8 @@
         </div>
     </div>
     <!--Footer-->
-    <footer class="text-white bg-blue  text-lg leading-loose">
-        <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto p-16">
+    <footer class="text-white bg-blue text-lg leading-loose">
+        <div class="mx-4 container sm:mx-auto py-16">
             <div class="flex flex-wrap items-center justify-between mx-auto">
                 <h2 class="text-3xl">Probereme vaše potřeby a <span class="font-bold">najdeme nejlepší řešení.</span>
                 </h2>

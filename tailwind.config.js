@@ -12,6 +12,9 @@ module.exports = {
       'gray': '#e0e4e3',
       'gray-white': '#f5f5f5'
     },
+    container: {
+      center: true,
+    },
     extend: {},
   },
   plugins: [
